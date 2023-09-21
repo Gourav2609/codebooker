@@ -16,7 +16,8 @@ import HelpIcon from '@mui/icons-material/Help';
 import MessageIcon from '@mui/icons-material/Message';
 import PolicyIcon from '@mui/icons-material/Policy';
 import ManageAccountsIcon from '@mui/icons-material/ManageAccounts';
-import { CaptureFeedback } from '../Feedback/CaptureFeedback'; //
+import { CaptureFeedback } from '../Feedback/CaptureFeedback';
+import FavoriteIcon from '@mui/icons-material/Favorite';
 
 export default function Dropdown() {
     const [anchorEl, setAnchorEl] = useState(null);
@@ -124,6 +125,10 @@ export default function Dropdown() {
                 transformOrigin={{ horizontal: 'right', vertical: 'top' }}
                 anchorOrigin={{ horizontal: 'right', vertical: 'bottom' }}
             >
+                <MenuItem onClick={() => navigate('/favourite')}>
+                    <FavoriteIcon fontSize='large' />
+                    &nbsp; Favorites
+                </MenuItem>
                 <MenuItem onClick={() => navigate('/support')}>
                     <HelpIcon fontSize='large' />
                     &nbsp; Help
